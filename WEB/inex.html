@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header class="header">
+
+        <nav class="navigation">
+            <a class="logo" href="">
+                <img src="" alt="" width="70">
+            </a>
+            <ul class="navigation-list">
+                <li class="navigation-item">
+                    <a class="navigation-link" href="inex.html">О проекте</a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="#">Курсы</a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="#">Преподаватели</a>
+                </li>
+                <li class="navigation-item">
+                    <a class="navigation-link" href="#">Контакты</a>
+                </li>
+                
+        </nav>
+
+    </header>
+    <section class="info">
+        <div class="fon">
+            <div class="left">
+                <img src="img/no-image.jpg" alt="Avatarka" width="45%">
+            </div>
+           
+        
+        <div class="right">
+            <script>
+                 let obj = {
+                    surname: "Ivanova",
+                    name: "Elena",
+                    patronymic: "Viktorovna",
+                    ocupation: "Преподаватель специальных дисциплин",
+                    degree: "среднее профессиональное",
+                    category: "первая",
+                    education: "Многопрофильный колледж при МГТУ им. Г.И. Носова",
+                    descip: [
+                    "Информатика",
+                    "Основы программирования",
+                    "Инженерная графика",
+                    ]
+                    
+                
+                };
+                let line = `
+                    <h2> ${obj.surname} ${obj.name} ${obj.patronymic}  </h2>
+                    
+                    <h3> <i>Должность:</i> ${obj.ocupation} </h3> <hr>
+                    <p> <i>Образование: </i>  ${obj.degree} </p>
+                    <p> <i>Категория: </i>  ${obj.category} </p>
+                    <p> <i>Место работы: </i>  ${obj.education} </p>
+                    <p> <i>Дисциплина: </i> <br>
+
+                    <ul>
+                    <li> ${obj.descip[0]}</li> <br> 
+                    <li> ${obj.descip[1]}</li>   <br>
+                    <li> ${obj.descip[2]} </li>  <br>
+
+                    </ul>
+                    <p> Дополненительная информация   </p>
+
+                    
+
+                    
+                    `;
+                
+                document.write(line);
+                obj.category = prompt("Введите категорию");
+                obj.experience = prompt("Введите стаж");
+                obj.email = prompt("Введите email");
+                obj.site = prompt("Введите персональный сайт");
+                document.write("<ul>"+ "<li>"+obj.category+"<li>" +
+                obj.experience +  "<li>" +obj.email + "<li>" + obj.site
+                +"</ul>"
+                )
+            </script>
+        </div>
+    </div>
+    </section>
+    
+
+  </body>
+</html>
