@@ -81,6 +81,17 @@
                 obj.category = prompt("Введите категорию");
                 obj.experience = prompt("Введите стаж");
                 obj.email = prompt("Введите email");
+                if (obj.email.indexOf("@") !== -1 && obj.email.includes (".")){//если метод возвращает значение, отличное от -1, то значит @ присутсвует в строке
+                    alert("Email введён корректно");
+                }else{
+                    alert("Email введён некорректно");
+                    obj.email = prompt("Введите email");
+                    if(obj.email.indexOf("@") !== -1 && obj.email.includes (".")){
+                        alert("Email введён корректно");
+                    }else{
+                    alert("Email введён некорректно");
+                    }
+                }
                 obj.site = prompt("Введите персональный сайт");
                 document.write("<ul>"+ "<li>"+obj.category+"<li>" +
                 obj.experience +  "<li>" +obj.email + "<li>" + obj.site
